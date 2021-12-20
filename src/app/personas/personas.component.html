@@ -1,0 +1,13 @@
+<div class="text-center">
+  <button class="btn btn-primary w-100 fw-bold" (click)="agregar()">+</button>
+</div>
+<hr />
+<app-persona
+  *ngFor="let personaElemento of personas; let i = index"
+  [persona]="personaElemento"
+  [indice]="i"
+>
+</app-persona>
+<hr />
+
+<!-- <router-outlet></router-outlet> -->

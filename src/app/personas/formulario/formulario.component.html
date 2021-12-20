@@ -1,0 +1,44 @@
+<form
+  class="d-flex justify-content-between align-items-baseline"
+  #f="ngForm"
+  (ngSubmit)="f.form.valid && onGuardarPersona()"
+>
+  <label for="nombre" class="d-none">Nombre</label>
+  <input
+    type="text"
+    name="nombre"
+    id="nombre"
+    class="form-control"
+    placeholder="Nombre"
+    [(ngModel)]="nombreInput"
+    required
+  />
+  <label for="apellido" class="d-none">Apellido</label>
+  <input
+    type="text"
+    name="apellido"
+    id="apellido"
+    class="form-control my-3 mx-3"
+    placeholder="Apellido"
+    [(ngModel)]="apellidoInput"
+    required
+  />
+  <button
+    class="btn btn-warning mb-3"
+    type="submit"
+    *ngIf="index != null; else bloqueAgregar"
+  >
+    Editar
+  </button>
+  <ng-template #bloqueAgregar>
+    <button class="btn btn-primary mb-3 ms-3" type="submit">Agregar</button>
+  </ng-template>
+  <button
+    class="btn btn-danger mb-3 ms-3"
+    type="submit"
+    *ngIf="index != null"
+    (click)="eliminarPersona()"
+  >
+    Eliminar
+  </button>
+</form>

@@ -1,0 +1,25 @@
+<div class="container">
+  <hr />
+  <div class="row card">
+    <div class="col card-body display-6">
+      <ul>
+        <li>
+          <!-- Utilizando queryParams para editar y eliminar el item, comentado en formulario.component.ts -->
+          <a
+            [routerLink]="['/personas', indice]"
+            [queryParams]="{ modoEdicion: '1' }"
+            >{{ persona.nombre }} {{ persona.apellido }}</a
+          >
+        </li>
+      </ul>
+      <div></div>
+      <!-- <button
+        type="submit"
+        class="btn btn-info text-white"
+        (click)="emitirSaludo()"
+      >
+        Editar
+      </button> -->
+    </div>
+  </div>
+</div>

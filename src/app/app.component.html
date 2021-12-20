@@ -2,14 +2,6 @@
   <div class="col">
     <h1 class="text-center my-3">{{ titulo }}</h1>
     <hr />
-    <app-formulario
-      (personaCreada)="personaAgregada($event)"
-    ></app-formulario>
+    <router-outlet></router-outlet>
   </div>
 </div>
-<app-persona
-  *ngFor="let personaElemento of personas; let i = index"
-  [persona]="personaElemento"
-  [indice]="i"
->
-</app-persona>
