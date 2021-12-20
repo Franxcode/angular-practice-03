@@ -1,0 +1,27 @@
+<form class="d-flex justify-content-between align-items-baseline">
+    <label for="nombre" class="d-none">Nombre</label>
+    <input
+      type="text"
+      name="nombre"
+      id="nombre"
+      class="form-control"
+      placeholder="Nombre"
+      [(ngModel)]="nombreInput"
+    />
+    <label for="apellido" class="d-none">Apellido</label>
+    <input
+      type="text"
+      name="apellido"
+      id="apellido"
+      class="form-control my-3 mx-3"
+      placeholder="Apellido"
+      [(ngModel)]="apellidoInput"
+    />
+    <button
+      class="btn btn-primary mb-3"
+      type="submit"
+      (click)="agregarPersona()"
+    >
+      Agregar
+    </button>
+  </form>
